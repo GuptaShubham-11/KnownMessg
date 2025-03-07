@@ -26,6 +26,7 @@ export interface IUser extends Document {
     password: string;
     verifyCode: string;
     verifyCodeExpiray: string;
+    isVerified: boolean;
     isAcceptingMessage: boolean;
     message: IMessage[];
 }
@@ -59,6 +60,10 @@ const userSchema = new Schema<IUser>({
     verifyCodeExpiray: {
         type: String,
         required: true
+    },
+    isVerified: {
+        type: Boolean,
+        default: false
     },
     isAcceptingMessage: {
         type: Boolean,
