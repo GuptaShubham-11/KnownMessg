@@ -2,6 +2,7 @@ import dbToConnect from "@/lib/db";
 import User from "@/models/User";
 import bcrypt from "bcryptjs";
 import sendVerificationEmail from "@/helpers/sendVerificationEmail";
+import { usernameValidation } from "@/schemas/signUpSchema";
 
 export async function POST(req: Request) {
     await dbToConnect();
