@@ -9,7 +9,7 @@ export const usernameValidation = z
         "Username must contain only letters, numbers, and underscores"
     );
 
-export const userSchema = z.object({
+export const signUpSchema = z.object({
     username: usernameValidation,
     email: z.string().email({ message: "Invalid email address" }),
     password: z
